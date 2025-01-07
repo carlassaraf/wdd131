@@ -1,13 +1,10 @@
-body {
-    margin: 0;
-}
-
 /* Grid layout and positions */
 
-#body {
+body {
     display: grid;
     grid-template: 150px 1fr 200px / 1fr auto;
     height: 100vh;
+    margin: 0;
 }
 
 header {
