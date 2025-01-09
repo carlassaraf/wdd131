@@ -9,6 +9,7 @@
 body {
     font-family: "Monserrat", sans-serif;
     margin: 0;
+    height: 100vh;
 }
 
 header, footer {
@@ -47,4 +48,37 @@ header {
 
 h1, h2 {
     margin: 0;
+    text-align: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+figure img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
 }
