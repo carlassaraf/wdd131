@@ -1,0 +1,56 @@
+:root {
+    --color-1: red;
+    --color-2: blue;
+    --color-3: white;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif, monospace;
+}
+
+header, footer {
+    background-color: var(--color-1);
+    color: var(--color-3);
+    padding: 1rem;
+}
+
+h1, h2, p {
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    font-weight: 700;
+}
+
+p span {
+    font-weight: 500;
+}
+
+picture img {
+    height: auto;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+svg {
+    max-width: 96px;
+    height: auto;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
