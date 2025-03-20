@@ -1,0 +1,13 @@
+@media screen and (min-width: 800px) {
+    
+    picture {
+        display: none;
+    }
+
+    main {
+        background-image: url('/images/london-large.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
