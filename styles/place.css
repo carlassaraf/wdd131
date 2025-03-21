@@ -1,7 +1,9 @@
 :root {
-    --color-1: red;
-    --color-2: blue;
-    --color-3: white;
+    --bg-color-2: #242038;
+    --bg-color-1: #A5243D;
+    --hover-color: #D1345B;
+    --font-color-2: #CAC4CE;
+    --font-color-1: #F7ECE1;
 }
 
 body {
@@ -11,8 +13,8 @@ body {
 }
 
 header, footer {
-    background-color: var(--color-1);
-    color: var(--color-3);
+    background-color: var(--bg-color-1);
+    color: var(--font-color-1);
     padding: 1rem;
 }
 
