@@ -1,0 +1,19 @@
+@media screen and (min-width: 35rem) {
+    
+    #temples {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        grid-column: 2 / 3;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+    }
+}
