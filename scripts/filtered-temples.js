@@ -85,8 +85,7 @@ const temples = [
     }
 ];
 
-temples.forEach(temple => {
-
+const templeToHTML = (temple) => {
     const card = document.createElement("div");
     card.setAttribute("class", "temple-card");
 
@@ -109,4 +108,43 @@ temples.forEach(temple => {
 
     card.append(name, location, dedicated, size, img);
     document.querySelector("#temples").append(card);
+}
+
+const renderCards = (temples) => {
+    document.querySelector("#temples").innerHTML = "";
+    temples.forEach(temple => templeToHTML(temple));
+}
+
+renderCards(temples);
+
+// Filters
+document.querySelectorAll(".navigation li a").forEach(a => {
+    // Add filter
+    a.addEventListener("click", (e) => {
+        // Prevent page reload
+        e.preventDefault();
+
+        switch(e.target.innerText.toLowerCase()) {
+
+            case "home":
+                renderCards(temples);
+                break;
+
+            case "old":
+                renderCards(temples.filter(temple => temple.dedicated.split(",")[0] < 1900));
+                break;
+
+            case "new":
+                renderCards(temples.filter(temple => temple.dedicated.split(",")[0] > 2000));
+                break;
+
+            case "large":
+                renderCards(temples.filter(temple => temple.area > 90000));
+                break;
+
+            case "small":
+                renderCards(temples.filter(temple => temple.area < 10000));
+                break;
+        }
+    });
 });
