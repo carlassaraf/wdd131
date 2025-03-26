@@ -105,6 +105,7 @@ temples.forEach(temple => {
     const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
+    img.loading = "lazy";
 
     card.append(name, location, dedicated, size, img);
     document.querySelector("#temples").append(card);
