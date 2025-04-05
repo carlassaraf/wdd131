@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fabrizio Carlassara">
+    <meta name="description" content="Form assignment">
+    <title>W05 Assignment: Product Review Form</title>
+
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+      <form action="review.html" method="get">
+        <div class="input-group">
+          <label>Product Name</label>
+          <select name="product-name" id="product-name" required>
+            <option value="" selected disabled>Select a product</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Overall Rating</label>
+          <div class="star-rating">
+            <div class="star">
+              <label for="onestar">☆</label>
+              <input type="radio" name="star-rating" id="onestar" required>              
+            </div>
+            <div class="star">
+              <label for="twostar">☆☆</label>
+              <input type="radio" name="star-rating" id="twostar" required>
+            </div>
+            <div class="star">
+              <label for="threestar">☆☆☆</label>
+              <input type="radio" name="star-rating" id="threestar" required>
+            </div>
+            <div class="star">
+              <label for="fourstar">☆☆☆☆</label>
+              <input type="radio" name="star-rating" id="fourstar" required>
+            </div>
+            <div class="star">
+              <label for="fivestar">☆☆☆☆☆</label>
+              <input type="radio" name="star-rating" id="fivestar" required>
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Date of Installation</label>
+          <input type="date" name="date" id="date" required>
+        </div>
+        <div class="input-group">
+          <label>Which features did you find useful in this product? (Check all that apply)</label>
+          <div>
+            <div class="usefulcheck">
+              <label for="useful-durability">Durability</label>
+              <input type="checkbox" name="useful-durability" id="useful-durability">
+            </div>
+            <div class="usefulcheck">
+              <label for="useful-ease">Ease of Use</label>
+              <input type="checkbox" name="useful-ease" id="useful-ease">
+            </div>
+            <div class="usefulcheck">
+              <label for="useful-performance">Performance</label>
+              <input type="checkbox" name="useful-performance" id="useful-performance">
+            </div>
+            <div class="usefulcheck">
+              <label for="useful-design">Design</label>
+              <input type="checkbox" name="useful-design" id="useful-design">
+            </div>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="written-review">Written Review (optional)</label>
+          <textarea name="written-review" id="written-review"></textarea>
+        </div>
+        <div class="input-group">
+          <label for="username">Your Name (optional)</label>
+          <input type="text" name="username" id="username">
+        </div>
+        <div class="input-group">
+          <input type="submit" value="Post Review">
+        </div>
+      </form>
+    </main>
+    <footer>
+        <p>©<span id="currentyear"></span> | Fabrizio Carlassara | Argentina 🇦🇷</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
